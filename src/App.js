@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { Fragment } from "react/jsx-runtime";
+import Header from "./app/components/header/Header";
+import { Outlet } from "react-router-dom";
+import Footer from "./app/components/footer/Footer";
+import styles from "./App.module.css"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Header />
+      {/* <div className={styles["test"]}> */}
+      <Outlet></Outlet>
+      {/* </div> */}
+      <Footer />
+    </Fragment>
   );
 }
 

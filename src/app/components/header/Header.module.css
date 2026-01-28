@@ -1,0 +1,320 @@
+.navbar-container {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 100%;
+    /* max-width: 1400px; */
+    animation: slideDown 0.6s ease-out;
+}
+
+.navbar {
+    background: rgba(247, 240, 225, 0.75);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    /* border-radius: 50px; */
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow:
+        0 8px 32px 0 rgba(85, 49, 34, 0.15),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.5),
+        0 2px 8px 0 rgba(85, 49, 34, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+}
+
+.navbar:hover {
+    box-shadow:
+        0 12px 40px 0 rgba(85, 49, 34, 0.2),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.6),
+        0 4px 12px 0 rgba(85, 49, 34, 0.12);
+}
+
+/* Logo Section */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    /* Reduced to prevent wrapping */
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    /* Prevent logo from shrinking */
+    white-space: nowrap;
+    /* Prevent text wrapping */
+}
+
+.navbar-logo:hover {
+    transform: translateY(-2px);
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 12px rgba(85, 49, 34, 0.3);
+    transition: all 0.3s ease;
+}
+
+.navbar-logo:hover .logo-icon {
+    transform: rotate(360deg) scale(1.1);
+    box-shadow: 0 6px 16px rgba(85, 49, 34, 0.4);
+}
+
+/* Navigation Menu */
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 4px;
+    /* Reduced gap to prevent wrapping */
+    align-items: center;
+    flex-wrap: nowrap;
+    /* Prevent wrapping on desktop */
+    white-space: nowrap;
+    /* Prevent text wrapping */
+    flex-shrink: 0;
+    /* Prevent menu from shrinking */
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-dark);
+    padding: 12px 20px;
+    /* Reduced padding to prevent wrapping */
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    /* Slightly smaller font to prevent wrapping */
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    /* Prevent text wrapping */
+    flex-shrink: 0;
+    /* Prevent shrinking */
+}
+
+/* Micro-interaction: Underline grows */
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 70%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* Micro-interaction: Text color shifts */
+.nav-link:hover {
+    color: var(--primary-color);
+    background: rgba(85, 49, 34, 0.05);
+    transform: translateY(-2px);
+}
+
+/* Active state */
+.nav-link.active {
+    background: linear-gradient(135deg, var(--primary-color), #6d4435);
+    color: white;
+    box-shadow: 0 4px 12px rgba(85, 49, 34, 0.3);
+}
+
+.nav-link.active:hover {
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(85, 49, 34, 0.4);
+}
+
+/* Micro-interaction: Icons subtly animate */
+.nav-link i {
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.nav-link:hover i {
+    transform: translateY(-2px) scale(1.1);
+}
+
+.nav-link.active i {
+    animation: iconPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Dropdown arrow animation */
+.dropdown-arrow {
+    transition: transform 0.3s ease;
+    display: inline-block;
+    font-size: 0.7rem;
+}
+
+.nav-item:hover .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+/* ==========================================
+   DROPDOWN MENU (Smooth drop-down motion)
+   ========================================== */
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    background: rgba(247, 240, 225, 0.95);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-radius: 20px;
+    padding: 12px;
+    min-width: 180px;
+    box-shadow:
+        0 12px 32px rgba(85, 49, 34, 0.2),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.5),
+        0 4px 12px rgba(85, 49, 34, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 100;
+}
+
+.nav-item:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    color: var(--text-dark);
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.dropdown-item:hover {
+    background: linear-gradient(135deg, rgba(85, 49, 34, 0.1), rgba(183, 136, 49, 0.1));
+    color: var(--primary-color);
+    transform: translateX(5px);
+    padding-left: 25px;
+}
+
+.dropdown-item i {
+    margin-right: 8px;
+    width: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover i {
+    transform: scale(1.2);
+    color: var(--secondary-color);
+}
+
+/* Responsive Design for Navbar */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .navbar-menu {
+        gap: 4px;
+        flex-wrap: wrap;
+        /* Allow wrapping on tablets */
+    }
+
+    .nav-link {
+        padding: 10px 14px;
+        /* Further reduced padding */
+        font-size: 0.85rem;
+        /* Smaller font on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        width: 100%;
+        top: 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        border-radius: 30px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+
+    .navbar-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-logo {
+        font-size: 1.2rem;
+    }
+
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .nav-link {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+    .dropdown-menu {
+        min-width: 150px;
+    }
+}
