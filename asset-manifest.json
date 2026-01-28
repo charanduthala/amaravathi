@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/amaravathi/static/css/main.b0dda799.css",
+    "main.js": "/amaravathi/static/js/main.d4e1b2d3.js",
+    "static/js/453.0b3d4b4e.chunk.js": "/amaravathi/static/js/453.0b3d4b4e.chunk.js",
+    "static/css/482.25283eb2.chunk.css": "/amaravathi/static/css/482.25283eb2.chunk.css",
+    "static/js/482.94ec4a9e.chunk.js": "/amaravathi/static/js/482.94ec4a9e.chunk.js",
+    "static/css/396.8a2e98e5.chunk.css": "/amaravathi/static/css/396.8a2e98e5.chunk.css",
+    "static/js/396.4c8e947d.chunk.js": "/amaravathi/static/js/396.4c8e947d.chunk.js",
+    "static/js/492.10243dd3.chunk.js": "/amaravathi/static/js/492.10243dd3.chunk.js",
+    "static/js/412.bf5fe787.chunk.js": "/amaravathi/static/js/412.bf5fe787.chunk.js",
+    "static/js/936.8d62d6f8.chunk.js": "/amaravathi/static/js/936.8d62d6f8.chunk.js",
+    "static/css/335.eaf6c6df.chunk.css": "/amaravathi/static/css/335.eaf6c6df.chunk.css",
+    "static/js/335.8630153b.chunk.js": "/amaravathi/static/js/335.8630153b.chunk.js",
+    "index.html": "/amaravathi/index.html",
+    "main.b0dda799.css.map": "/amaravathi/static/css/main.b0dda799.css.map",
+    "main.d4e1b2d3.js.map": "/amaravathi/static/js/main.d4e1b2d3.js.map",
+    "453.0b3d4b4e.chunk.js.map": "/amaravathi/static/js/453.0b3d4b4e.chunk.js.map",
+    "482.25283eb2.chunk.css.map": "/amaravathi/static/css/482.25283eb2.chunk.css.map",
+    "482.94ec4a9e.chunk.js.map": "/amaravathi/static/js/482.94ec4a9e.chunk.js.map",
+    "396.8a2e98e5.chunk.css.map": "/amaravathi/static/css/396.8a2e98e5.chunk.css.map",
+    "396.4c8e947d.chunk.js.map": "/amaravathi/static/js/396.4c8e947d.chunk.js.map",
+    "492.10243dd3.chunk.js.map": "/amaravathi/static/js/492.10243dd3.chunk.js.map",
+    "412.bf5fe787.chunk.js.map": "/amaravathi/static/js/412.bf5fe787.chunk.js.map",
+    "936.8d62d6f8.chunk.js.map": "/amaravathi/static/js/936.8d62d6f8.chunk.js.map",
+    "335.eaf6c6df.chunk.css.map": "/amaravathi/static/css/335.eaf6c6df.chunk.css.map",
+    "335.8630153b.chunk.js.map": "/amaravathi/static/js/335.8630153b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b0dda799.css",
+    "static/js/main.d4e1b2d3.js"
+  ]
+}
