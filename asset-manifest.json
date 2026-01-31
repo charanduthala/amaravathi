@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/amaravathi/static/css/main.b0dda799.css",
-    "main.js": "/amaravathi/static/js/main.73680b7b.js",
+    "main.js": "/amaravathi/static/js/main.231a0d8f.js",
     "static/js/453.0b3d4b4e.chunk.js": "/amaravathi/static/js/453.0b3d4b4e.chunk.js",
-    "static/css/482.25283eb2.chunk.css": "/amaravathi/static/css/482.25283eb2.chunk.css",
+    "static/css/482.e93e501c.chunk.css": "/amaravathi/static/css/482.e93e501c.chunk.css",
     "static/js/482.94ec4a9e.chunk.js": "/amaravathi/static/js/482.94ec4a9e.chunk.js",
     "static/css/396.8a2e98e5.chunk.css": "/amaravathi/static/css/396.8a2e98e5.chunk.css",
     "static/js/396.4c8e947d.chunk.js": "/amaravathi/static/js/396.4c8e947d.chunk.js",
-    "static/js/492.67747950.chunk.js": "/amaravathi/static/js/492.67747950.chunk.js",
+    "static/css/284.70ae1cfe.chunk.css": "/amaravathi/static/css/284.70ae1cfe.chunk.css",
+    "static/js/284.e3495b37.chunk.js": "/amaravathi/static/js/284.e3495b37.chunk.js",
     "static/js/412.bf5fe787.chunk.js": "/amaravathi/static/js/412.bf5fe787.chunk.js",
     "static/css/301.d3be5e4a.chunk.css": "/amaravathi/static/css/301.d3be5e4a.chunk.css",
     "static/js/301.baf4d9ab.chunk.js": "/amaravathi/static/js/301.baf4d9ab.chunk.js",
@@ -15,13 +16,14 @@
     "static/js/335.8630153b.chunk.js": "/amaravathi/static/js/335.8630153b.chunk.js",
     "index.html": "/amaravathi/index.html",
     "main.b0dda799.css.map": "/amaravathi/static/css/main.b0dda799.css.map",
-    "main.73680b7b.js.map": "/amaravathi/static/js/main.73680b7b.js.map",
+    "main.231a0d8f.js.map": "/amaravathi/static/js/main.231a0d8f.js.map",
     "453.0b3d4b4e.chunk.js.map": "/amaravathi/static/js/453.0b3d4b4e.chunk.js.map",
-    "482.25283eb2.chunk.css.map": "/amaravathi/static/css/482.25283eb2.chunk.css.map",
+    "482.e93e501c.chunk.css.map": "/amaravathi/static/css/482.e93e501c.chunk.css.map",
     "482.94ec4a9e.chunk.js.map": "/amaravathi/static/js/482.94ec4a9e.chunk.js.map",
     "396.8a2e98e5.chunk.css.map": "/amaravathi/static/css/396.8a2e98e5.chunk.css.map",
     "396.4c8e947d.chunk.js.map": "/amaravathi/static/js/396.4c8e947d.chunk.js.map",
-    "492.67747950.chunk.js.map": "/amaravathi/static/js/492.67747950.chunk.js.map",
+    "284.70ae1cfe.chunk.css.map": "/amaravathi/static/css/284.70ae1cfe.chunk.css.map",
+    "284.e3495b37.chunk.js.map": "/amaravathi/static/js/284.e3495b37.chunk.js.map",
     "412.bf5fe787.chunk.js.map": "/amaravathi/static/js/412.bf5fe787.chunk.js.map",
     "301.d3be5e4a.chunk.css.map": "/amaravathi/static/css/301.d3be5e4a.chunk.css.map",
     "301.baf4d9ab.chunk.js.map": "/amaravathi/static/js/301.baf4d9ab.chunk.js.map",
@@ -30,6 +32,6 @@
   },
   "entrypoints": [
     "static/css/main.b0dda799.css",
-    "static/js/main.73680b7b.js"
+    "static/js/main.231a0d8f.js"
   ]
 }
