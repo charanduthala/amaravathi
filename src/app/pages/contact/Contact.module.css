@@ -81,6 +81,8 @@ body {
 
 /* Temple Icon */
 .temple-icon {
+    display: flex;
+    justify-content: center;
     animation: scaleIn 0.6s ease-out 0.3s backwards;
 }
 
@@ -98,8 +100,9 @@ body {
 
 /* Contact Info Grid */
 .contact-info-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    /* grid-template-columns: 1fr; */
+    justify-content: center;
     gap: 1.5rem;
     margin-top: 2rem;
 }
@@ -175,7 +178,10 @@ body {
 .map-preview-container {
     position: relative;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
     overflow: hidden;
+    /* max-width: 30rem; */
     box-shadow: 0 10px 30px rgba(85, 49, 34, 0.15);
 }
 
@@ -1104,4 +1110,19 @@ body {
     .status-banner {
         display: none !important;
     }
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 12px rgba(85, 49, 34, 0.3);
+    transition: all 0.3s ease;
+    overflow: hidden;
 }

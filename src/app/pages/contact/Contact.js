@@ -1,8 +1,15 @@
 import { Fragment } from "react/jsx-runtime"
 
 import styles from './Contact.module.css';
+import { useState } from "react";
+
+import logo from '../../../assets/logos/AA_logo_final.svg'
 
 function Contact() {
+    const [showChatPanel, setShowChatPanel] = useState(false);
+    const handleChatPanel = () => {
+        setShowChatPanel(!showChatPanel);
+    }
     return <Fragment>
         {/* Open/Closed Status Banner */}
         <div id="statusBanner" className={styles["status-banner"]}></div>
@@ -13,11 +20,15 @@ function Contact() {
             <div className={styles["ambient-arch"]}></div>
             <div className={styles["ambient-buddha"]}></div>
 
-            <div className={`${styles['hero-contact-card']} max-w-2xl w-full`}>
+            <div className={`${styles['hero-contact-card']}  w-full`}>
                 <div className="text-center mb-8">
                     {/* Logo/Icon */}
                     <div className={`${styles['temple-icon']} mb-6`}>
-                        <i className="fas fa-gopuram text-6xl text-secondary"></i>
+                        {/* <i className="fas fa-gopuram text-6xl text-secondary"></i> */}
+                        <div className={styles["logo-icon"]} >
+                            {/* <i className={"fas fa-utensils"}></i> */}
+                            <img src={logo} alt="amaravathi-logo" />
+                        </div>
                     </div>
 
                     <h1 className="text-5xl md:text-6xl font-display font-bold text-primary mb-4">
@@ -54,7 +65,7 @@ function Contact() {
                             <div>
                                 <p class="text-sm text-primary/60">Visit Us</p>
                                 <p class="text-lg font-semibold text-primary">
-                                    123 Temple Street, Heritage District
+                                    960 US-9, South Amboy, NJ 08879
                                 </p>
                             </div>
                         </div>
@@ -63,12 +74,22 @@ function Contact() {
                     {/* Map Preview */}
                     <div className={`${styles['map-preview-container']} mt-8`}>
                         <div id="mapPreview" className={styles["map-preview"]}>
-                            <iframe
+                            {/* <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.6339123!2d78.486671!3d17.385044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDIzJzA2LjIiTiA3OMKwMjknMTIuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
                                 width="100%"
                                 height="100%"
                                 // style="border:0;"
                                 allowfullscreen=""
+                                loading="lazy"
+                                title="map"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe> */}
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12142.091938553463!2d-74.29686205387111!3d40.46369363667911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3cbc261da588d%3A0x95c56935d0f72564!2s960%20US-9%2C%20South%20Amboy%2C%20NJ%2008879%2C%20USA!5e0!3m2!1sen!2sin!4v1770641836007!5m2!1sen!2sin"
+                                width="1320"
+                                height="300"
+                                // style="border:0;" 
+                                allowfullscreen="yes"
                                 loading="lazy"
                                 title="map"
                                 referrerpolicy="no-referrer-when-downgrade">
@@ -109,7 +130,7 @@ function Contact() {
                     <span>Get Directions</span>
                 </button>
 
-                <a href="#reservation" className={styles["contact-channel-btn"]}>
+                <a href="/amaravathi/reserve" className={styles["contact-channel-btn"]}>
                     <i className="fas fa-calendar-check"></i>
                     <span>Table Reservation</span>
                 </a>
@@ -293,74 +314,75 @@ function Contact() {
 
         {/* Chat Assistant Widget */}
         <div id="chatWidget" className={styles["chat-widget"]}>
-            <button id="chatToggle" className={styles["chat-toggle"]}>
+            <button id="chatToggle" className={styles["chat-toggle"]} onClick={handleChatPanel}>
                 <i className="fas fa-comments"></i>
             </button>
-
-            <div id="chatPanel" className={`${styles['chat-panel']} ${styles['hidden']}`}>
-                <div className={styles["chat-header"]}>
-                    <div className="flex items-center">
-                        <i className="fas fa-robot text-2xl text-tertiary mr-3"></i>
-                        <div>
-                            <h4 className="font-semibold text-tertiary">Amaravathi Assistant</h4>
-                            <p className="text-xs text-tertiary/80">We're here to help!</p>
+            {showChatPanel &&
+                <div id="chatPanel" className={`${styles['chat-panel']} ${styles['hidden']}`}>
+                    <div className={styles["chat-header"]}>
+                        <div className="flex items-center">
+                            <i className="fas fa-robot text-2xl text-tertiary mr-3"></i>
+                            <div>
+                                <h4 className="font-semibold text-tertiary">Amaravathi Assistant</h4>
+                                <p className="text-xs text-tertiary/80">We're here to help!</p>
+                            </div>
                         </div>
-                    </div>
-                    <button id="chatClose" className="text-tertiary hover:text-white">
-                        <i className="fas fa-times"></i>
-                    </button>
-                </div>
-
-                <div className={styles["chat-body"]}>
-                    <div className={styles["chat-welcome"]}>
-                        <p className="text-sm text-primary/80 mb-4">Hi! How can we help you today?</p>
-                    </div>
-
-                    <div className={styles["faq-grid"]}>
-                        <button onclick="handleFAQ('timing')" className={styles["faq-btn"]}>
-                            <i className="fas fa-clock mr-2"></i>
-                            Opening Hours
-                        </button>
-                        <button onclick="handleFAQ('menu')" className={styles["faq-btn"]}>
-                            <i className="fas fa-utensils mr-2"></i>
-                            View Menu
-                        </button>
-                        <button onclick="handleFAQ('reservation')" className={styles["faq-btn"]}>
-                            <i className="fas fa-calendar mr-2"></i>
-                            Reservations
-                        </button>
-                        <button onclick="handleFAQ('parking')" className={styles["faq-btn"]}>
-                            <i className="fas fa-parking mr-2"></i>
-                            Parking Info
-                        </button>
-                        <button onclick="handleFAQ('veg')" className={styles["faq-btn"]}>
-                            <i className="fas fa-leaf mr-2"></i>
-                            Pure Veg?
-                        </button>
-                        <button onclick="handleFAQ('jain')" className={styles["faq-btn"]}>
-                            <i className="fas fa-om mr-2"></i>
-                            Jain Food
-                        </button>
-                        <button onclick="handleFAQ('delivery')" className={styles["faq-btn"]}>
-                            <i className="fas fa-motorcycle mr-2"></i>
-                            Delivery
-                        </button>
-                        <button onclick="handleFAQ('contact')" className={styles["faq-btn"]}>
-                            <i className="fas fa-phone mr-2"></i>
-                            Call Us
+                        <button id="chatClose" className="text-tertiary hover:text-white" onClick={handleChatPanel}>
+                            <i className="fas fa-times"></i>
                         </button>
                     </div>
 
-                    <div id="chatMessages" className={styles["chat-messages"]}></div>
-                </div>
+                    <div className={styles["chat-body"]}>
+                        <div className={styles["chat-welcome"]}>
+                            <p className="text-sm text-primary/80 mb-4">Hi! How can we help you today?</p>
+                        </div>
 
-                <div className={styles["chat-footer"]}>
-                    <a href="https://wa.me/919876543210" target="_blank" className={styles["whatsapp-btn"]} rel='noreferrer'>
-                        <i className="fab fa-whatsapp mr-2"></i>
-                        Chat on WhatsApp
-                    </a>
+                        <div className={styles["faq-grid"]}>
+                            <button onclick="handleFAQ('timing')" className={styles["faq-btn"]}>
+                                <i className="fas fa-clock mr-2"></i>
+                                Opening Hours
+                            </button>
+                            <button onclick="handleFAQ('menu')" className={styles["faq-btn"]}>
+                                <i className="fas fa-utensils mr-2"></i>
+                                View Menu
+                            </button>
+                            <button onclick="handleFAQ('reservation')" className={styles["faq-btn"]}>
+                                <i className="fas fa-calendar mr-2"></i>
+                                Reservations
+                            </button>
+                            <button onclick="handleFAQ('parking')" className={styles["faq-btn"]}>
+                                <i className="fas fa-parking mr-2"></i>
+                                Parking Info
+                            </button>
+                            <button onclick="handleFAQ('veg')" className={styles["faq-btn"]}>
+                                <i className="fas fa-leaf mr-2"></i>
+                                Pure Veg?
+                            </button>
+                            <button onclick="handleFAQ('jain')" className={styles["faq-btn"]}>
+                                <i className="fas fa-om mr-2"></i>
+                                Jain Food
+                            </button>
+                            <button onclick="handleFAQ('delivery')" className={styles["faq-btn"]}>
+                                <i className="fas fa-motorcycle mr-2"></i>
+                                Delivery
+                            </button>
+                            <button onclick="handleFAQ('contact')" className={styles["faq-btn"]}>
+                                <i className="fas fa-phone mr-2"></i>
+                                Call Us
+                            </button>
+                        </div>
+
+                        <div id="chatMessages" className={styles["chat-messages"]}></div>
+                    </div>
+
+                    <div className={styles["chat-footer"]}>
+                        <a href="https://wa.me/919876543210" target="_blank" className={styles["whatsapp-btn"]} rel='noreferrer'>
+                            <i className="fab fa-whatsapp mr-2"></i>
+                            Chat on WhatsApp
+                        </a>
+                    </div>
                 </div>
-            </div>
+            }
         </div>
 
         {/* FAQ Drawer */}

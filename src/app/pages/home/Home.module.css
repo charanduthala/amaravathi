@@ -459,7 +459,7 @@
    ========================================== */
 
 .specialities-section {
-    padding: var(--spacing-xl) 0;
+    padding: 0 0 var(--spacing-xl) 0;
     background: linear-gradient(180deg, var(--white) 0%, var(--tertiary-color) 100%);
 }
 
@@ -775,7 +775,7 @@
 }
 
 .benefit-card p {
-    color: var(--text-light);
+    /* color: var(--text-light); */
     line-height: 1.8;
 }
 
@@ -875,7 +875,7 @@
    ========================================== */
 
 .order-section {
-    padding: var(--spacing-xl) 0;
+    padding: 0 0 var(--spacing-xl) 0;
     background: var(--white);
 }
 

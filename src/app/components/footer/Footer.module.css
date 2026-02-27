@@ -309,8 +309,10 @@
 
 /* Map Section */
 .map-section {
+    grid-column: span 3;
     display: flex;
     flex-direction: column;
+    max-height: 25rem;
 }
 
 .map-container {
@@ -412,7 +414,7 @@
    ============================================ */
 
 .footer-bottom {
-    padding: 2rem 0;
+    padding: 2rem .5rem;
     background-color: rgba(0, 0, 0, 0.2);
     margin-top: 0;
 }

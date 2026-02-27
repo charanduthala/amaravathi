@@ -17,7 +17,7 @@ function Order() {
                 </p>
                 {/* Link to Menu Page */}
                 <div className="mb-8">
-                    <a href="/menu" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105" style={{ backgroundColor: '#553122', color: '#f7f0e1' }}>
+                    <a href="/amaravathi/menu" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all hover:scale-105" style={{ backgroundColor: '#553122', color: '#f7f0e1' }}>
                         <i className="fas fa-book-open"></i>
                         View Full Menu
                     </a>
@@ -98,7 +98,7 @@ function Order() {
                     </p>
                 </div>
                 <div className="text-center">
-                    <a href="/menu" className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold transition-all hover:scale-105 shadow-lg" style={{ backgroundColor: '#553122', color: '#f7f0e1' }}>
+                    <a href="/amaravathi/menu" className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold transition-all hover:scale-105 shadow-lg" style={{ backgroundColor: '#553122', color: '#f7f0e1' }}>
                         <i className="fas fa-utensils"></i>
                         View Complete Menu
                     </a>

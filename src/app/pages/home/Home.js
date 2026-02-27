@@ -28,15 +28,15 @@ function Home() {
 
             {/* Floating CTA Dock */}
             <div className={styles["floating-cta-dock"]}>
-                <a href="/menu" className={`${styles['cta-btn']} ${styles['cta-primary']}`}>
+                <a href="/amaravathi/menu" className={`${styles['cta-btn']} ${styles['cta-primary']}`}>
                     <i className="fas fa-utensils"></i>
                     Explore Menu
                 </a>
-                <a href="/order" className={`${styles['cta-btn']} ${styles['cta-secondary']}`}>
+                <a href="/amaravathi/order" className={`${styles['cta-btn']} ${styles['cta-primary']}`}>
                     <i className="fas fa-shopping-bag"></i>
                     Order Online
                 </a>
-                <a href="/reserve" className={`${styles['cta-btn']} ${styles['cta-secondary']}`}>
+                <a href="/amaravathi/reserve" className={`${styles['cta-btn']} ${styles['cta-primary']}`}>
                     <i className="fas fa-calendar-check"></i>
                     Reserve a Table
                 </a>
@@ -55,9 +55,9 @@ function Home() {
 
                 <div className={styles["about-content"]}>
                     <div className={styles["about-text"]}>
-                        <p className={styles["about-intro"]}>
+                        {/* <p className={styles["about-intro"]}>
                             Amaravathi Authentics brings the timeless flavors of Andhra vegetarian cooking to life. From crisp golden dosas to aromatic thalis and flavour-packed Indo-Chinese delights, our dishes celebrate the richness of India's plant-based culinary heritage.
-                        </p>
+                        </p> */}
 
                         <div className={styles["heritage-story"]}>
                             <h3>Our Identity Reflects Our Soul:</h3>
@@ -94,7 +94,7 @@ function Home() {
         </section>
 
         {/* Specialities Section */}
-        <section id="menu" className={styles["specialities-section"]}>
+        {/* <section id="menu" className={styles["specialities-section"]}>
             <div className={styles["container"]}>
                 <div className={styles["section-header"]}>
                     <h2 className={styles["section-title"]}>Signature Veg Delights You'll Love</h2>
@@ -107,7 +107,7 @@ function Home() {
                 </div>
 
                 <div className={styles["category-content"]}>
-                    {/* Dosa Corner */}
+                    Dosa Corner
                     <div className={`${styles['category-panel']} ${styles['active']}`} data-panel="dosa">
                         <div className={styles["category-hero"]}>
                             <div className={styles["category-description"]}>
@@ -159,7 +159,7 @@ function Home() {
                         </div>
                     </div>
 
-                    {/* Andhra Thalis */}
+                    Andhra Thalis
                     <div className={styles["category-panel"]} data-panel="thali">
                         <div className={styles["category-hero"]}>
                             <div className={styles["category-description"]}>
@@ -181,7 +181,7 @@ function Home() {
                         </div>
                     </div>
 
-                    {/* Indo-Chinese */}
+                    Indo-Chinese
                     <div className={styles["category-panel"]} data-panel="indo-chinese">
                         <div className={styles["category-hero"]}>
                             <div className={styles["category-description"]}>
@@ -234,7 +234,7 @@ function Home() {
                     </div>
                 </div>
             </div>
-        </section>
+        </section> */}
 
         {/* Why Choose Us Section */}
         <section className={styles["why-choose-section"]}>
@@ -294,7 +294,7 @@ function Home() {
                 </div>
 
                 {/* Customer Counter */}
-                <div className={styles["customer-counter"]}>
+                {/* <div className={styles["customer-counter"]}>
                     <div className={styles["counter-item"]}>
                         <div className={styles["counter-number"]} data-target="4.8">0</div>
                         <div className={styles["counter-label"]}>⭐ Google Rating</div>
@@ -307,12 +307,12 @@ function Home() {
                         <div className={styles["counter-number"]} data-target="50">0</div>
                         <div className={styles["counter-label"]}>🥞 Dosa Varieties</div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
 
         {/* Reviews Section */}
-        <section className={styles["reviews-section"]}>
+        {/* <section className={styles["reviews-section"]}>
             <div className={styles["container"]}>
                 <div className={styles["section-header"]}>
                     <h2 className={styles["section-title"]}>What Our Guests Say</h2>
@@ -338,20 +338,20 @@ function Home() {
                     </div>
                 </div>
             </div>
-        </section>
+        </section> */}
 
         {/* Order/Reserve Section */}
         <section id="ordering" className={styles["order-section"]}>
             <div className={styles["container"]}>
                 <div className={styles["section-header"]}>
                     <h2 className={styles["section-title"]}>Dine-In, Takeaway or Delivery — Choose Your Experience</h2>
-                    <p className={styles["section-subtitle"]}>
+                    {/* <p className={styles["section-subtitle"]}>
                         Whether you're craving a quick dosa, a comforting thali, or a fusion Indo-Chinese treat, Amaravathi Authentics ensures purity, freshness, and the taste of tradition in every bite.
-                    </p>
+                    </p> */}
                 </div>
 
                 <div className={styles["conversion-dock"]}>
-                    <a href="/reserve" className={styles["conversion-btn"]}>
+                    <a href="/amaravathi/reserve" className={styles["conversion-btn"]}>
                         <i className="fas fa-calendar-alt"></i>
                         <span className={styles["btn-text"]}>Reserve a Table</span>
                         <span className={styles["btn-subtitle"]}>Book your dining experience</span>
@@ -378,7 +378,7 @@ function Home() {
                 <p className={styles["final-cta-subtitle"]}>
                     At Amaravathi Authentics, vegetarian food isn't just a choice — it's a celebration of culture, purity, and timeless taste.
                 </p>
-                <a href="/reserve" className={styles["final-cta-btn"]}>
+                <a href="/amaravathi/reserve" className={styles["final-cta-btn"]}>
                     <i className="fas fa-heart"></i>
                     Experience Amaravathi Today
                 </a>
